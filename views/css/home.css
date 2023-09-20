@@ -1,0 +1,21 @@
+h1{
+    color:cornflowerblue;
+}
+
+#TV{
+    color:grey;
+    display: inline;
+    margin-left: 40px;
+
+}
+
+#topbar {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#logo{
+    width: 75px;
+    height: 75px;
+}
