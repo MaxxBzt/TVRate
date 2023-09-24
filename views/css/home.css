@@ -19,3 +19,46 @@ h1{
     width: 75px;
     height: 75px;
 }
+#search-input {
+    width: 90%;
+    height: 36px;
+    border-radius: 4px;
+    padding-left: 12px;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid rgb(137, 151, 155);
+    transition: border-color 150ms ease-in-out 0s;
+    outline: none;
+    color: rgb(33, 49, 60);
+    background-color: rgb(255, 255, 255);
+}
+
+#search-input:hover {
+    box-shadow: rgb(231, 238, 236) 0px 0px 0px 3px;
+}
+
+#submit-button {
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid #222222;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: #fff;
+    color: #222222;
+    margin-left: 10px; /* Add margin to create space between the input and button */
+}
+
+#submit-button:hover {
+    border-color: #000000;
+    background: #f7f7f7;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}

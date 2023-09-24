@@ -5,6 +5,38 @@
     <meta charset="UTF-8">
     <title>TVRate</title>
     <link href="css/home.css" rel="stylesheet">
+
+
+    <script>
+        function fetchData() {
+            // Get the argument from the input
+            const argument = document.getElementById('search-input').value;
+
+            // Check if the argument is not empty
+            if (argument.trim() !== '') {
+                // Fetch the data from the server
+                const url = `/show?argument=${argument}`;
+
+                fetch(url)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        // Display the result
+                        document.getElementById('result').innerText = data.message;
+
+                        // Change the URL without triggering a page reload
+                        history.pushState(null, null, url);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+            } else {
+                // Handle the case when the input is empty
+                alert('Please enter an argument.');
+            }
+        }
+    </script>
+
+    
 </head>
 
 <body>
@@ -15,9 +47,21 @@
         </h1>
     </div>
 
-    <button id="button1">Fetch Data 1</button>
-    <button id="button2">Fetch Data 2</button>
-    
+
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Enter your argument">
+        <button id="submit-button" onclick="fetchData()">Submit</button>
+    </div>
+
+
+    <br>
+
+    <div id="result"></div>
+
+    <br>
+
+    <a href="shows">Go to shows page</a>
+
 </body>
 
 </html>
