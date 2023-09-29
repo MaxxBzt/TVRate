@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TVRate</title>
     <link href="css/home.css" rel="stylesheet">
+
 
 
     <script>
@@ -37,31 +39,34 @@
     </script>
 
     
+
 </head>
 
 <body>
     <div id="topbar">
-        <img src="img/TVRate.png" alt="TVRate" id="logo">
-        <h1>
-            <div id="TV">TV</div>Rate
-        </h1>
+        <div id="logo-container">
+            <img src="img/TVRate.png" alt="TVRate" id="logo">
+            <h1>
+                <div id="TV">TV</div>Rate
+            </h1>
+        </div>
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="shows.html">Shows</a>
+            <a href="home">About</a>
+        </div>
     </div>
-
 
     <div id="search-bar">
         <input type="text" id="search-input" placeholder="Enter your argument">
         <button id="submit-button" onclick="fetchData()">Submit</button>
     </div>
 
-
     <br>
 
     <div id="result"></div>
 
     <br>
-
-    <a href="shows">Go to shows page</a>
-
 </body>
 
 </html>
