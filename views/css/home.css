@@ -2,6 +2,10 @@ h1 {
     color: cornflowerblue;
 }
 
+body {
+    padding: 0 20px;
+  }
+
 #TV {
     color: grey;
     display: inline;
@@ -93,4 +97,28 @@ h1 {
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+
+#operations {
+    display: flex;
+    flex-direction: column;
+justify-content: space-between;
+}
+#operations > div {
+    margin-bottom: 20px;
+  }
+
+#search, #create, #change, #remove{
+    padding: 10px 20px; 
+    background-color:rgb(205, 227, 227); /* Set background color to aquamarine */
+    font-size: 18px; /* Make the text smaller */
+    border-radius: 10px; /* Adjust the radius as needed */
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
